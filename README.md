@@ -8,11 +8,13 @@ SH script to install / manage Lets Encrypt for Server Pilot free users
  * Ubuntu 14.04 
  * Server running with Serverpilot
  * Root / SUDO User Access
+ * Install in a non user home directory (so /etc/ will work fine)
 
 ---
 ##How to Install
 
 ```
+cd /etc/
 git clone https://github.com/dfinnema/le-serverpilot.git
 cd le-serverpilot
 chmod +x df.sh
@@ -21,9 +23,15 @@ chmod +x df.sh
 ##How to Use
 
 ```
-cd le-serverpilot
+cd /etc/le-serverpilot
 ./df.sh
 ```
+---
+## Config File
+
+you can edit the config file to change the testing mode to 0 to not use the staging server at Lets Encrypt
+As well as setup Mailgun to email you the result of each CRON job 
+
 ---
 ## Misc
 
@@ -63,6 +71,3 @@ A: No it uses a very usefull script from (https://github.com/lukas2511/letsencry
 Q: How often will it renew the cert?
 
 A: If the Certificate is older than 29 days it will renew the cert if run manually or through a CRON job
-
-
-
