@@ -7,6 +7,7 @@ SH script to install / manage Lets Encrypt for Server Pilot free users
 
  * Ubuntu 14.04 
  * Server running with Serverpilot
+ * curl installed
  * Root / SUDO User Access
  * Install in a non user home directory (so /etc/ will work fine)
 
@@ -78,3 +79,16 @@ A: No it uses a very usefull script from (https://github.com/lukas2511/letsencry
 Q: How often will it renew the cert?
 
 A: If the Certificate is older than 29 days it will renew the cert if run manually or through a CRON job
+
+---
+## Troubleshooting
+Geting a Error:
+
+Error: curl: command not found
+
+Fix: Make sure that cURL is installed test with sudo curl -V 
+if you get a line saying : -bash: curl: command not found.
+Then you need to install cURL using: sudo apt-get install curl.
+Ones done test with sudo curl -V. should give a long messeg starting with exp: curl 7.35.0
+
+---
