@@ -19,6 +19,13 @@ git clone https://github.com/dfinnema/le-serverpilot.git
 cd le-serverpilot
 chmod +x df.sh
 ```
+##For development branch:
+```
+cd /etc/
+git clone -b development https://github.com/dfinnema/le-serverpilot.git
+cd le-serverpilot
+chmod +x df.sh
+```
 ---
 ##How to Use
 
@@ -42,7 +49,7 @@ It uses the Shell script from (https://github.com/lukas2511/letsencrypt.sh) to d
 ---
 ## Email result of CRON Jobs
 
-Be default it does not email anybody unless you edit the config file (copy a sample from config.sample) 
+By default it does not email anybody unless you edit the config file (copy a sample from config.sample) 
 It uses mailgun to send it as not all servers have the mail module installed by default. 
 
 ---
